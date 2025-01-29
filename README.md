@@ -1,8 +1,5 @@
 # 🍎 Fruits & Vegetables Recognition 🍊🥦
 
-![TensorFlow](https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg) ![Python](https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg) ![Keras](https://upload.wikimedia.org/wikipedia/commons/a/a4/Keras_logo.svg)
-
-## 📌 Overview
 The **Fruits & Vegetables Recognition** project is a Deep Learning model built using **Python, TensorFlow, Keras, and CNN**, trained on **12,840 images** to classify over **36 types** of fruits and vegetables with **93% accuracy**. It helps in automating fresh produce identification for applications in supermarkets, agriculture, and health monitoring.
 
 ## 🚀 Features

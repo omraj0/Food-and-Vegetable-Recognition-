@@ -1,95 +1,81 @@
 # 🍎 Fruits & Vegetables Recognition 🍊🥦
 
-The **Fruits & Vegetables Recognition** project is a Deep Learning model built using **Python, TensorFlow, Keras, and CNN**, trained on **12,840 images** to classify over **36 types** of fruits and vegetables with **93% accuracy**. It helps in automating fresh produce identification for applications in supermarkets, agriculture, and health monitoring.
+Fruits & Vegetables Recognition is a Deep Learning project that classifies over **36 types** of fruits and vegetables using a **Convolutional Neural Network (CNN)**. The model achieves **93% accuracy** by training on **12,840 images**. 
 
 ## 🚀 Features
-✅ **36-class classification** of fruits & vegetables 🍏🍇🥕  
-✅ **Convolutional Neural Network (CNN)** for image recognition 🧠  
-✅ **Trained on 12,840 labeled images** for accurate results 📸  
-✅ **Achieved 93% accuracy** with rigorous validation ✅  
-✅ **Built using Python, TensorFlow, and Keras** 🐍  
-✅ **Runs on Google Colab for easy training and execution** 💻  
+- ✅ Recognizes 36+ categories of fruits and vegetables
+- ✅ Trained on **12,840 images** with high accuracy
+- ✅ **CNN-based architecture** using TensorFlow & Keras
+- ✅ **Data Augmentation** for better generalization
+- ✅ **Google Colab** used for model training
+- ✅ **Fast & Accurate Predictions**
 
-## 🛠️ Technologies Used
-- **Python** 🐍
-- **TensorFlow** 🔶
-- **Keras** 🔬
-- **CNN (Convolutional Neural Network)** 🧠
-- **Google Colab** 🖥️
-- **NumPy & Pandas** 📊
-- **Matplotlib & Seaborn** 📈
+## 🔗 Live Demo & Repository
+- 📂 **GitHub Repo**: [Fruits & Vegetables Recognition](https://github.com/omraj0/Fruits-and-Vegetables-Recognition)
 
-## 📂 Dataset
-The dataset consists of **12,840 images** of **fruits and vegetables**, categorized into **36 classes**. The images were preprocessed, normalized, and augmented to improve model generalization.
+## 🛠️ Installation & Setup
+To run the project locally, follow these steps:
 
-## ⚙️ Installation & Setup
-Follow these steps to install and run the project locally:
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/fruits-vegetables-recognition.git
-cd fruits-vegetables-recognition
+git clone https://github.com/omraj0/Fruits-and-Vegetables-Recognition.git
+cd Fruits-and-Vegetables-Recognition
+
+# Create and activate a virtual environment (Optional but recommended)
+python -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
 
 # Install required dependencies
-pip install tensorflow keras numpy pandas matplotlib seaborn
+pip install -r requirements.txt
 
-# Run the Jupyter Notebook
-jupyter notebook
+# Run the model training script
+python train.py
+
+# To make predictions using the trained model
+python predict.py --image test_image.jpg
 ```
 
-## 🔄 Model Training
-To train the CNN model on the dataset:
-```python
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+## 🧠 Model Architecture
+The CNN model consists of:
+- 🏗️ **2 Convolutional Layers** (ReLU activation, MaxPooling)
+- 🎯 **Fully Connected Dense Layers**
+- 🔢 **Softmax Layer** for multi-class classification
+- 🔄 **Adam Optimizer** for efficient training
+- 📊 **Categorical Crossentropy Loss**
 
-# Define the CNN model
-model = Sequential([
-    Conv2D(32, (3,3), activation='relu', input_shape=(64, 64, 3)),
-    MaxPooling2D(2,2),
-    Conv2D(64, (3,3), activation='relu'),
-    MaxPooling2D(2,2),
-    Flatten(),
-    Dense(128, activation='relu'),
-    Dense(36, activation='softmax')
-])
+## 📊 Results & Performance
+- **Training Accuracy**: ~93%
+- **Dataset**: 12,840 labeled images
+- **Evaluation**: High precision and recall on test data
 
-# Compile the model
-model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-
-# Train the model
-model.fit(train_data, epochs=20, validation_data=valid_data)
+## 🤖 Usage
+### Train the Model 🏋️‍♂️
+```bash
+python train.py
 ```
-
-## 📊 Results
-- **Accuracy Achieved:** 🎯 **93%**
-- **Dataset Size:** 📸 **12,840 images**
-- **Total Classes:** 🍏🥕 **36 Fruits & Vegetables**
-- **Training Time:** ⏳ ~30 minutes on Google Colab
-
-## 📖 Usage
-1. Upload an image of a fruit or vegetable.
-2. The model processes the image and predicts the class.
-3. The output includes the class name and confidence score.
+### Predict on a New Image 🖼️
+```bash
+python predict.py --image test_image.jpg
+```
 
 ## 🤝 Contributing
-Contributions are welcome! To contribute:
-```bash
-# Fork the repository
-git fork https://github.com/yourusername/fruits-vegetables-recognition.git
+Contributions are welcome! Follow these steps:
+1. **Fork the repository**
+   ```bash
+   git fork https://github.com/omraj0/Fruits-and-Vegetables-Recognition.git
+   ```
+2. **Create a new branch**
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+3. **Commit and push your changes**
+   ```bash
+   git commit -m "Add new feature"
+   git push origin feature/your-feature
+   ```
+4. **Create a Pull Request**
 
-# Create a new branch
-git checkout -b feature/your-feature
-
-# Commit your changes
-git commit -m "Added new feature"
-
-# Push to the branch
-git push origin feature/your-feature
-
-# Open a Pull Request
-```
-
-## 📜 License
+## 📄 License
 This project is licensed under the **MIT License**.
 
 ## 📫 Contact
